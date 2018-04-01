@@ -10,7 +10,7 @@ import './main.css';
 const App = () =>
   <Router>
     <div>
-      <Nav />
+      <Animation />
       <Switch>
         
         <Route exact path="/Observations" component={Observations} />

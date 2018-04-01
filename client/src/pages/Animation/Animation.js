@@ -1,5 +1,5 @@
 import React from "react";
-import "../..//main.css";
+import "../../main.css";
 
 const Animation = () => (
   
@@ -66,7 +66,9 @@ const Animation = () => (
                 <h3>testing</h3>
             </div>
         </label>
+
         <div class="solar" data-component="Solar">
+
             <div class="solar_systm" data-component="SolarSystm">
                 <div class="planet mercury" data-component="Planet Mercury">
                     <div class="planet_description mercury" data-component="PlanetDescription Mercury">
@@ -84,23 +86,19 @@ const Animation = () => (
                     <div class="overlay" data-component="Overlay"></div>
                 </div>
             </div>
+            
+           {/* //===============================================================Venus */}
+
             <div class="solar_systm" data-component="SolarSystm">
+
                 <div class="planet venus" data-component="Planet Venus">
-                    <div class="moon triton" data-component="Moon Triton">
-                        <h3>Asteroids</h3>
-                        <h2>Triton</h2>
-                    </div>
-                    <div class="moon proteus" data-component="Moon Proteus">
-                        <h3> Moon/Asteroid</h3>
-                        <h2>Proteus</h2>
-                    </div>
-                    <div class="moon nereid" data-component="Moon Nereid">
-                        <h3>Asteroids</h3>
-                        <h2>300 are known</h2>
-                    </div>
-                    <div class="trajectory tri" data-component="Trajectory Tri"></div>
-                    <div class="trajectory pro" data-component="Trajectory Pro"></div>
-                    <div class="trajectory ner" data-component="Trajectory Ner"></div>
+                    <div class="moon triton" data-component="Moon Triton"> 
+                    </div> 
+                
+                    
+                    {/* <div class="trajectory tri" data-component="Trajectory Tri"></div>
+                      */}
+
                     <div class="planet_description v" data-component="PlanetDescription V">
                         <h2>Planet</h2>
                         <h1>Venus</h1>
@@ -116,6 +114,8 @@ const Animation = () => (
                     <div class="overlay" data-component="Overlay"></div>
                 </div>
             </div>
+
+            // ============================================================EARTH
             <div class="solar_systm" data-component="SolarSystm">
                 <div class="planet earth" data-component="Planet Earth">
                     <div class="moon emoon" data-component="Moon EMoon">
@@ -166,6 +166,7 @@ const Animation = () => (
                     <div class="overlay" data-component="Overlay"></div>
                 </div>
             </div>
+            // =============================================================JUPITER
             <div class="solar_systm" data-component="SolarSystm">
                 <div class="planet jupiter" data-component="Planet Jupiter">
                     <div class="moon lo" data-component="Moon Lo">
