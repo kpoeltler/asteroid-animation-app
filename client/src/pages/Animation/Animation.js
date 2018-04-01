@@ -78,8 +78,8 @@ const Animation = () => (
                             Romans named it after their swift-footed messenger god.</p>
                         <label for='readMercury'>
                             <a>
-                                Read Mor
-                                <span>e</span>
+                                Read More
+                                
                             </a>
                         </label>
                     </div>
@@ -92,13 +92,6 @@ const Animation = () => (
             <div class="solar_systm" data-component="SolarSystm">
 
                 <div class="planet venus" data-component="Planet Venus">
-                    <div class="moon triton" data-component="Moon Triton"> 
-                    </div> 
-                
-                    
-                    {/* <div class="trajectory tri" data-component="Trajectory Tri"></div>
-                      */}
-
                     <div class="planet_description v" data-component="PlanetDescription V">
                         <h2>Planet</h2>
                         <h1>Venus</h1>
@@ -106,8 +99,7 @@ const Animation = () => (
                             by the Sun and so are hard to**** stars, the evening star and the morning star.</p>
                         <label for='readVenus'>
                             <a>
-                                Read Mor
-                                <span>e</span>
+                                Read More      
                             </a>
                         </label>
                     </div>
@@ -130,8 +122,7 @@ const Animation = () => (
                             of liquid water on its surface, and, of course, life.</p>
                         <label for='readEarth'>
                             <a>
-                                Read Mor
-                                <span>e</span>
+                                Read More     
                             </a>
                         </label>
                     </div>
@@ -158,8 +149,8 @@ const Animation = () => (
                         </p>
                         <label for="readMars">
                             <a>
-                                Read Mor
-                                <span>e</span>
+                                Read More
+                                
                             </a>
                         </label>
                     </div>
@@ -190,8 +181,8 @@ const Animation = () => (
                         <p>Jupiter, our loyal defender against asteroid annihilation. </p>
                         <label for="readJupiter">
                             <a>
-                                Read Mor
-                                <span>e</span>
+                                Read More
+                                
                             </a>
                         </label>
                     </div>
@@ -235,34 +226,14 @@ const Animation = () => (
             <input class="read" data-component="Read" id="closeVenus" name="venusRead" type="radio"/>
             <div class="panel" data-component="Panel">
                 <h1>Venus</h1>
-                <p>Venus, the second planet from the sun, is named for the Roman goddess of love and beauty. The planet — the
-                    only planet named after a female — may have been named for the most beautiful deity of her pantheon because
-                    it shone the brightest of the five planets known to ancient astronomers.</p>
-                <p>In ancient times, Venus was often thought to be two different stars, the evening star and the morning star
-                    — that is, the ones that first appeared at sunset and sunrise. In Latin, they were respectively known
-                    as Vesper and Lucifer. In Christian times, Lucifer, or "light-bringer," became known as the name of Satan
-                    before his fall. However, further observations of Venus in the space age show a very hellish environment.
-                    This makes Venus a very difficult planet to observe from up close, because spacecraft do not survive
-                    long on its surface.</p>
-                <img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2014/2-whatistheave.jpg"/>
-                <h2>A day on Venus lasts longer than a year.</h2>
-                <p>It takes 243 Earth days to rotate once on its axis (sidereal day). The planet’s orbit around the Sun takes
-                    225 Earth days, compared to the Earth’s 365. A day on the surface of Venus (solar day) takes 117 Earth
-                    days.</p>
-                <h2>Venus rotates in the opposite direction to most other planets.</h2>
-                <p>This means that Venus is rotating in the opposite direction to the Sun, this is also know as a retrograde
-                    rotation. A possible reason might be a collision in the past with an asteroid or other object that caused
-                    the planet to alter its rotational path. It also differs from most other planets in our solar systm by
-                    having no natural satellites.</p>
-                <h2>Venus is the second brightest object in the night sky.</h2>
-                <p>Only the Moon is brighter. With a magnitude of between -3.8 to -4.6 Venus is so bright it can be seen during
-                    daytime on a clear day.</p>
-                <h2>Atmospheric pressure on Venus is 92 times greater than the Earth’s.</h2>
-                <p>While its size and mass are similar to Earth, the small asteroids are crushed when entering its atmosphere,
-                    meaning no small craters lie on the surface of the planet. The pressure felt by a human on the surface
-                    would be equivalent to that experienced deep beneath the sea on Earth.</p>
-                <br/>
-            </div>
+                <h2>Misconception</h2>
+                <p> VE68 was the first quasi-satellite to be discovered around a major planet in the Solar System. In a frame of reference rotating with Venus, it appears to travel around it during one Venerean year but it actually orbits the Sun, not Venus. </p>
+                
+                <h2>Venus-crosser</h2>
+                <p>A Venus-crosser is an asteroid whose orbit crosses that of Venus. There are 2,809[1] Venus-crosser and 98 outer-grazers known.[2] Mercury-crossers or grazers are marked. Venus also has a quasi-satellite, 2002 VE68. This asteroid is also a Mercury- and Earth-crosser; it seems to have been a "companion" to Venus for the last 7000 years or so only, and is destined to be ejected from this orbital arrangement about 500 years from now.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Orbites_definition.png"/>
+                <br/> 
+                </div>
             <input class="read" data-component="Read" id="readEarth" name="earthRead" type="radio"/>
             <label class="closeBig" data-component="CloseBig" for="closeEarth"></label>
             <input class="read" data-component="Read" id="closeEarth" name="earthRead" type="radio"/>
@@ -276,9 +247,6 @@ const Animation = () => (
                     hazardous asteroid of the Apollo group, approximately 150 meters in diameter. </p>
                 <p>It was discovered on 26 January 2017, by the Space Surveillance Telescope at Lincoln Laboratory's ETS (Atom
                     Site) and passed within 6.6 lunar distances of Earth on 7 February 2017 at 6:36 UT.</p>
-
-
-
 
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Toutatis.jpg/250px-Toutatis.jpg"/>
                 <h2>potentially hazardous object (PHO)</h2>
