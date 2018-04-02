@@ -83,27 +83,3 @@ class Entry extends Component {
 
 export default Entry;
 
-// componentDidMount() {
-//   this.loadentrys();
-// }
-
-// loadentrys = () => {
-//   axios.getentrys()
-//     .then(res =>
-//       this.setState({ entrys: res.data, asteroid: "", star: "", reflection: "" })
-//     )
-//     .catch(err => console.log(err));
-// };
-
-// deleteentry = id => {
-//   API.deleteentry(id)
-//     .then(res => this.loadentrys())
-//     .catch(err => console.log(err));
-// };
-
-// handleInputChange = event => {
-//   const { name, value } = event.asteroid;
-//   this.setState({
-//     []:value
-//   });
-// };
