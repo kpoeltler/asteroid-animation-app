@@ -1,1 +1,1 @@
-export { default } from "./Animation.js";
+export { default } from "./Animation";

@@ -1,4 +1,4 @@
-export { default } from "./Observations";
+export { default } from "./entry";
 
 
 

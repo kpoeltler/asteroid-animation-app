@@ -1,20 +1,20 @@
 import axios from "axios";
 
 export default {
-  // Gets all observations
-  getObservations: function() {
-    return axios.get("/api/observations");
+  // Gets all entrys
+  getentrys: function() {
+    return axios.get("/api/entry");
   },
-  // Gets the observations with the given id
-  getObservation: function(id) {
-    return axios.get("/api/observations/" + id);
+  // Gets the entrys with the given id
+  getentry: function(id) {
+    return axios.get("/api/entry/" + id);
   },
-  // Deletes the observations with the given id
-  deleteObservation: function(id) {
-    return axios.delete("/api/observations/" + id);
+  // Deletes the entrys with the given id
+  deleteentry: function(id) {
+    return axios.delete("/api/entry/" + id);
   },
-  // Saves an observation to the database
-  saveObservation: function(observationData) {
-    return axios.post("/api/observations", observationData);
+  // Saves an entry to the database
+  saveentry: function(entryData) {
+    return axios.post("/api/entry", entryData);
   }
 };

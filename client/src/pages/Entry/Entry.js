@@ -8,7 +8,7 @@ import Axios from "axios";
 
 // import App from "./App"
 
-class entrys extends Component {
+class entry extends Component {
   
     state = {
       entrys: [],
@@ -81,7 +81,7 @@ class entrys extends Component {
   }
 }
 
-export default entrys;
+export default entry;
 
 // componentDidMount() {
 //   this.loadentrys();
