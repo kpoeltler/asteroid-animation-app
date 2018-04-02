@@ -8,23 +8,21 @@ import Axios from "axios";
 
 // import App from "./App"
 
-class Observations extends Component {
+class entrys extends Component {
   
     state = {
-      observations: [],
-      asteroid: "",
-      orbit: "",
-      reflection: ""
+      entrys: [],
+      comment: ""
     };
 
     componentDidMount() {
-      this.loadObservations();
+      this.loadentrys();
     }
 
-    loadObservations = () => {
-      API.getObservations()
+    loadentrys = () => {
+      API.getentrys()
         .then(res =>
-          this.setState({ Observations: res.data, asteroid: "", orbit: "", reflection: "" })
+          this.setState({ entrys: res.data, comment: "" })
         )
         .catch(err => console.log(err));
     };
@@ -41,19 +39,17 @@ class Observations extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("hi");
-    if (this.state.asteroid && this.state.orbit) {
+    if ( this.state.comment) {
       console.log("hi2");
-     API.saveObservation({
-          asteroid: this.state.asteroid,
-          orbit: this.state.orbit,
-          reflection: this.state.reflection
+     API.saveentry({
+          comment: this.state.comment
         })
-        .then(res => this.loadObservations())
+        .then(res => this.loadentrys())
         .catch(err => console.log(err));
     }
   };
   // this.handleInputChange = this.handleInputChange.bind(this);
-  // this.loadObservations = this.loadObservations.bind(this);
+  // this.loadentrys = this.loadentrys.bind(this);
   // this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
 
@@ -63,24 +59,11 @@ class Observations extends Component {
         <Row>
           <Col size="sm-12">
             <Jumbotron>
-              
               <form>
-                <Input
-                  name="asteroid"
-                  onChange={this.handleInputChange.bind(this)}
-                  placeholder="Asteroid's name"
-                />
-              
-                <Input
-                  name="orbit"
-                  onChange={this.handleInputChange.bind()}
-                  placeholder="Which orbit? Atira, Inner or Outer Main-belt, TransNeptunian, Aten, Parabolic, Hyperbolic, Amor, Jupiter Trojan, Mars-crossing, or Centaur"
-                />
-
                 <TextArea
                   name="reflection"
                   onChange={this.handleInputChange.bind(this)}
-                  placeholder="Reflection"
+                  placeholder="comment"
                 />
                 <FormBtn
                   /* disabled={!(this.state.orbit && this.state.asteroid)} */
@@ -98,23 +81,23 @@ class Observations extends Component {
   }
 }
 
-export default Observations;
+export default entrys;
 
 // componentDidMount() {
-//   this.loadObservations();
+//   this.loadentrys();
 // }
 
-// loadObservations = () => {
-//   axios.getObservations()
+// loadentrys = () => {
+//   axios.getentrys()
 //     .then(res =>
-//       this.setState({ observations: res.data, asteroid: "", star: "", reflection: "" })
+//       this.setState({ entrys: res.data, asteroid: "", star: "", reflection: "" })
 //     )
 //     .catch(err => console.log(err));
 // };
 
-// deleteObservation = id => {
-//   API.deleteObservation(id)
-//     .then(res => this.loadObservations())
+// deleteentry = id => {
+//   API.deleteentry(id)
+//     .then(res => this.loadentrys())
 //     .catch(err => console.log(err));
 // };
 

@@ -4,17 +4,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const entrySchema = new Schema({
-  asteroid: {
-    type: String,
-    trim: true,
-    required: "To travel beyond the event horizen we need an asteroid's name"
-  },
-  orbit: {
-    type: String,
-    trim: true,
-    required: false
-  },
-  reflection: {
+  
+  comment: {
     type: String,
     validate: [
       function(input) {
@@ -24,10 +15,6 @@ const entrySchema = new Schema({
     ],
     trim: true,
     required: false
-  },
-  date: {
-    type: Date,
-    default: Date.now
   }
 });
 
