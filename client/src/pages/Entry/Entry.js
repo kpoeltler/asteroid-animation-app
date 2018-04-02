@@ -62,7 +62,10 @@ class Entry extends Component {
       API.saveEntry ({
        comment: this.state.comment
       })
-        .then(res => this.loadBooks())
+        .then(res => {
+          console.log(res);
+          this.loadEntries()
+        })
         .catch(err => console.log(err));
     }
   };
