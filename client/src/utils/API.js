@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   // Gets all entrys
-  getentrys: function() {
+  getentries: function() {
     return axios.get("/api/entry");
   },
   // Gets the entrys with the given id

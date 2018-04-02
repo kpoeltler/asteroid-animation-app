@@ -74,8 +74,7 @@ const Animation = () => (
                     <div class="planet_description mercury" data-component="PlanetDescription Mercury">
                         <h2>Planet</h2>
                         <h1>Mercury</h1>
-                        <p>The closest planet to the sun. It circles the sun faster than all the other planets, which is why
-                            Romans named it after their swift-footed messenger god.</p>
+                        <p></p>
                         <label for='readMercury'>
                             <a>
                                 Read More 

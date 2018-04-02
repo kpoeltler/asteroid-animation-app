@@ -20,8 +20,8 @@ class Entry extends Component {
       this.loadentries();
     }
 
-    loadentrys = () => {
-      API.getentrys()
+    loadentries = () => {
+      API.getentries()
         .then(res =>
           this.setState({ entries: res.data, comment: "" })
         )

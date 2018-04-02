@@ -6,17 +6,15 @@ import  './index.css';
 import './main.css';
 import { Col, Row, Container } from "./components/Grid";
 import { Input, TextArea, FormBtn } from "./components/Form";
+import Detail from "./pages/Detail";
 
 const App = () =>
   <Router>
     <div>
-      <Nav />
-      <Switch>
-        
-        <Route exact path="/entry" component={Entry} /> 
-       
-           
-      </Switch>
+      <Entry />
+       <Switch>
+        <Route exact path="/Detail" component={Detail} /> 
+      </Switch>  
     </div>
   </Router>;
 
