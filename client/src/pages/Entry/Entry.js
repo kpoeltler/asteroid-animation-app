@@ -6,6 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Axios from "axios";
 import Nav from "../../components/Nav";
+import Panel from "../Panel";
 
 // import App from "./App"
 
