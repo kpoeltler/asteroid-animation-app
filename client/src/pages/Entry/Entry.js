@@ -17,11 +17,11 @@ class Entry extends Component {
     };
 
     componentDidMount() {
-      this.loadentries();
+      this.loadEntries();
     }
 
-    loadentries = () => {
-      API.getentries()
+    loadEntries = () => {
+      API.getEntries()
         .then(res =>
           this.setState({ entries: res.data, comment: "" })
         )
@@ -37,18 +37,36 @@ class Entry extends Component {
   };
 
 
+//   router.post('/new', function(req, res, next){
+//     var todo = req.body;
+//     if(!todo.title || !(todo.isDone + '')){
+//         res.status(400);
+//         res.json({
+//             "error": "Bad Data"
+//         });
+//     } else {
+//         db.todos.save(todo, function(err, todo){
+//             if(err){
+//                 res.send(err);
+//             }
+//             res.json(todo);
+//         });
+//     }
+// });
+
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("hi");
-    if ( this.state.comment) {
-      console.log("hi2");
-     API.saveentry({
-          comment: this.state.comment
-        })
-        .then(res => this.loadentrys())
+    if (this.state.comment) {
+      console.log("good comment");
+      API.saveEntry ({
+       comment: this.state.comment
+      })
+        .then(res => this.loadBooks())
         .catch(err => console.log(err));
     }
   };
+       
   // this.handleInputChange = this.handleInputChange.bind(this);
   // this.loadentrys = this.loadentrys.bind(this);
   // this.handleFormSubmit = this.handleFormSubmit.bind(this);
