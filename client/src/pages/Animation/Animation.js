@@ -16,7 +16,7 @@ const Animation = () => (
                     <div class="pip" data-component="Pip"></div>
                     Jupiter
                 </h2>
-                <h3>Trojans</h3>
+                <h3>Trojan Asteroids</h3>
                 <h3>Asteroid Belt</h3>
             </div>
         </label>
@@ -28,7 +28,7 @@ const Animation = () => (
                     <div class="pip" data-component="Pip"></div>
                     Mars
                 </h2>
-                <h3>Amors</h3>
+                <h3>Amor Asteroids</h3>
             </div>
         </label>
         <input checked="checked" class="planet3" data-component="Planet3" id="earth" name="planet" type="radio"/>
@@ -52,7 +52,7 @@ const Animation = () => (
                     <div class="pip" data-component="Pip"></div>
                     Venus
                 </h2>
-                <h3>Aten Asteroids</h3>
+                <h3>VE68</h3>
             </div>
         </label>
         <input checked="checked" class="planet1" data-component="Planet1" id="mercury" name="planet" type="radio"/>
@@ -78,8 +78,7 @@ const Animation = () => (
                             Romans named it after their swift-footed messenger god.</p>
                         <label for='readMercury'>
                             <a>
-                                Read More
-                                
+                                Read More 
                             </a>
                         </label>
                     </div>
@@ -95,8 +94,7 @@ const Animation = () => (
                     <div class="planet_description v" data-component="PlanetDescription V">
                         <h2>Planet</h2>
                         <h1>Venus</h1>
-                        <p>Aten Asteroids orbit between Venus and Earth. Three hundred have been detected, but they are hidden
-                            by the Sun and so are hard to**** stars, the evening star and the morning star.</p>
+                        <p></p>
                         <label for='readVenus'>
                             <a>
                                 Read More      
@@ -107,19 +105,18 @@ const Animation = () => (
                 </div>
             </div>
 
-            // ============================================================EARTH
+            {/* // ============================================================EARTH */}
             <div class="solar_systm" data-component="SolarSystm">
                 <div class="planet earth" data-component="Planet Earth">
                     <div class="moon emoon" data-component="Moon EMoon">
-                        <h3>Asteroid</h3>
-                        <h2>Aten</h2>
+                        <h3>Moon</h3>
+                        <h2>Moon</h2>
                     </div>
                     <div class="trajectory m"></div>
                     <div class="planet_description earth" data-component="PlanetDescription Earth">
                         <h2>Planet</h2>
                         <h1>Earth</h1>
-                        <p>Earth, our home. It is the only planet known to have an atmosphere containing free oxygen, oceans
-                            of liquid water on its surface, and, of course, life.</p>
+                        <p>Near Earth Asteroids, 20% of which could destroy our exisitence.</p>
                         <label for='readEarth'>
                             <a>
                                 Read More     
@@ -157,7 +154,7 @@ const Animation = () => (
                     <div class="overlay" data-component="Overlay"></div>
                 </div>
             </div>
-            // =============================================================JUPITER
+            {/* // =============================================================JUPITER */}
             <div class="solar_systm" data-component="SolarSystm">
                 <div class="planet jupiter" data-component="Planet Jupiter">
                     <div class="moon lo" data-component="Moon Lo">
@@ -181,8 +178,7 @@ const Animation = () => (
                         <p>Jupiter, our loyal defender against asteroid annihilation. </p>
                         <label for="readJupiter">
                             <a>
-                                Read More
-                                
+                                Read More 
                             </a>
                         </label>
                     </div>
