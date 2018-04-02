@@ -1,6 +1,6 @@
 import React from "react";
 import "../../main.css";
-
+// import TextArea from "../components/Form/TextArea"
 const Animation = () => (
   
   <div>
@@ -283,7 +283,9 @@ const Animation = () => (
                 <p>Two days after NEAR Shoemaker began its orbit of Eros, the spacecraft captured this rotation movie as it moved closer to the asteroid. Although a number of movies have appeared on the NEAR Web site showing all manners of fascinating surface features, this was the last taken at a great enough distance to capture the full illuminated part of the asteroid in each frame. The movie shows a full rotation on February 16, 2000, as viewed from a range of about 340 kilometers (211 miles). It nicely captures the relationship of the two major landforms, the saddle and the 5.3-kilometer (3.3-mile) diameter crater, to the rest of Eros. (Product of selected images from 0126105943 to 0126124299)</p>
 
                 <h2>Add Comments</h2>
-                <p></p>
+                <p>
+                    
+                </p>
                 <br/>
             </div>
             <input class="read" data-component="Read" id="readJupiter" name="jupiterRead" type="radio"/>

@@ -5,24 +5,25 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Axios from "axios";
+import Nav from "../../components/Nav";
 
 // import App from "./App"
 
 class Entry extends Component {
   
     state = {
-      entrys: [],
+      entries: [],
       comment: ""
     };
 
     componentDidMount() {
-      this.loadentrys();
+      this.loadentries();
     }
 
     loadentrys = () => {
       API.getentrys()
         .then(res =>
-          this.setState({ entrys: res.data, comment: "" })
+          this.setState({ entries: res.data, comment: "" })
         )
         .catch(err => console.log(err));
     };
@@ -58,10 +59,11 @@ class Entry extends Component {
       <Container fluid>
         <Row>
           <Col size="sm-12">
+          <Nav />
             <Jumbotron>
               <form>
                 <TextArea
-                  name="reflection"
+                  name="comment"
                   onChange={this.handleInputChange.bind(this)}
                   placeholder="comment"
                 />

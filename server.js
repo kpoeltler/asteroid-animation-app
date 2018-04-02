@@ -6,7 +6,6 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const ObjectID = require('mongodb').ObjectID;
-const User = require("./models/user");
 
 // **Configure body parser for AJAX requests shouldn't this be Axios?
 app.use(bodyParser.urlencoded({ extended: false }));
