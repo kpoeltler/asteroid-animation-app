@@ -129,12 +129,12 @@ const Animation = () => (
             <div class="solar_systm" data-component="SolarSystm">
                 <div class="planet mars" data-component="Planet Mars">
                     <div class="moon deimos" data-component="Moon Deimos">
-                        <h3>Moon/Asteroid</h3>
+                        <h3>Moon</h3>
                         <h2>Deimos</h2>
                     </div>
                     <div class="trajectory d" data-component="Trajectory D"></div>
                     <div class="moon phoebos" data-component="Moon Phoebos">
-                        <h3>Moon/Asteroid</h3>
+                        <h3>Moon</h3>
                         <h2>Phoebos</h2>
                     </div>
                     <div class="trajectory p" data-component="Trajectory P"></div>
@@ -235,7 +235,6 @@ const Animation = () => (
             <input class="read" data-component="Read" id="closeEarth" name="earthRead" type="radio"/>
             <div class="panel">
                 <h1>Earth</h1>
-
                 <h2>Apollo Asteroid</h2>
                 <h3>BQ6</h3>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/2017_BQ6_radar_rotation.gif/260px-2017_BQ6_radar_rotation.gif"/>
@@ -255,17 +254,7 @@ const Animation = () => (
                     to be larger than one kilometer in diameter (see list of largest PHAs below).[3][4][a] Most of the discovered
                     PHAs are Apollo asteroids (1,601) and fewer belong to the group of Aten asteroids (169).
                 </p>
-                <h2></h2>
-                <p>Due to the apparent movements of the Sun and planets in relation to their viewpoint, ancient scientists insisted
-                    that the Earth remained static, whilst other celestial bodies travelled in circular orbits around it.
-                    Eventually, the view that the Sun was at the centre of the universe was postulated by Copernicus, though
-                    this is also not the case.</p>
-                <h2>Earth has a powerful magnetic field.</h2>
-                <p>This phenomenon is caused by the nickel-iron core of the planet, coupled with its rapid rotation. This field
-                    protects the Earth from the effects of solar wind.</p>
-                <h2>There is only one natural satellite of the planet Earth.</h2>
-                <p>As a percentage of the size of the body it orbits, the Moon is the largest satellite of any planet in our
-                    solar systm. In real terms, however, it is only the fifth largest natural satellite.</p>
+                
                 <br/>
             </div>
             <input class="read" data-component="Read" id="readMars" name="marsRead" type="radio"/>
