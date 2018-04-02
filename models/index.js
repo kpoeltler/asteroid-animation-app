@@ -1,5 +1,5 @@
 module.exports = {
-  Entry: require("./observation"),
+  Entry: require("./Entry"),
   
   
   };

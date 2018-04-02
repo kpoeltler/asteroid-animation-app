@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const observationRoutes = require("./observation");
+const entryRoutes = require("./entry");
 
-// Observation routes
-router.use("/observation", observationRoutes);
+// entry routes
+router.use("/entry", entryRoutes);
 
 module.exports = router;

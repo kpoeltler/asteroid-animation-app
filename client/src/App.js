@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Observations from "./pages/Observations";
+import Entry from "./pages/Entry";
 import Nav from "./components/Nav";
 import Animation from "./pages/Animation";
 import  './index.css';
@@ -13,8 +13,8 @@ const App = () =>
       <Animation />
       <Switch>
         
-        <Route exact path="/Observations" component={Observations} />
-        <Route exact path="/Observations/Animation" component={Animation} />  
+        <Route exact path="/entry" component={Entry} />
+        <Route exact path="/entry/Animation" component={Animation} />  
        
         
       </Switch>
