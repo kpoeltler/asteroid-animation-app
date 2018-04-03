@@ -28,7 +28,7 @@ body {
         animation: backgroundScroll 60s linear 1;
         animation-fill-mode: forwards;
     }
-
+    
     /* Set up proportionate scaling */
  
     .navbar-inverse {
@@ -39,7 +39,5 @@ body {
      button .collapsed .navbar-toggle .sr-only .icon-bar{
         border-color: orange;
         height: 30px;
-
-
      }
           
