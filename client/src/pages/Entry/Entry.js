@@ -55,7 +55,7 @@ class Entry extends Component {
         .catch(err => console.log(err));
     }
   };
-  // .then(res => this.loadObservations())
+  
   render() {
     return (
       <Container fluid>

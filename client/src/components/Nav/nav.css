@@ -6,6 +6,29 @@
     } 
     h1{
         font-family:'futuroNormal';
-        letter-spacing: 8px;
+        letter-spacing: 7px;
     }
-    /* .navbar-brand  */
+    @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    
+    #animate-area	{ 
+        /* width: 560px; 
+        height: 400px;  */
+        background-image: url();
+        background-position: 0px 0px;
+        background-repeat: repeat-x;
+        background-size: 80% auto;
+        animation: animatedBackground 10s linear infinite;
+        animation-fill-mode: forwards;
+        animation: backgroundScroll 60s linear 1;
+        animation-fill-mode: forwards;
+    }
+
+    /* Set up proportionate scaling */
+ 
+    .navbar-inverse {
+    
+         border-color: #040009;
+     } 
