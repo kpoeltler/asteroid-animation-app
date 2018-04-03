@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Entry from "./pages/Entry";
 import Detail from "./pages/Detail";
@@ -6,7 +6,6 @@ import Detail from "./pages/Detail";
 const App = () =>
   <Router>
     <div>
-      
        <Switch>
        <Route exact path="/" component={Entry} />
         <Route exact path="/entry" component={Entry} />
