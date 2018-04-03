@@ -4,6 +4,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const entrySchema = new Schema({
+    asteroid: {
+      type: String,
+      required: true },
+     orbit: { 
+        type: String,
+        required: true },
     comment: {
     type: String,
     validate: [
@@ -14,8 +20,9 @@ const entrySchema = new Schema({
     ],
     trim: true,
     required: false
-  }
+  },
+  user: String,
+  date: { type: Date, default: Date.now }
 });
-
 const Entry = mongoose.model("Entry", entrySchema);
 module.exports = Entry;

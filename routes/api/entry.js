@@ -1,17 +1,30 @@
 const router = require("express").Router();
 const entryController = require("../../controllers/entryController");
 
-// Matches with "/api/entry"
 router.route("/")
-  .post(entryController.create)
-  .get(entryController.findAll);
+  .get(entryController.findAll)
+  .post(entryController.create);
   
-
-// Matches with "/api/entry/:id"
 router
   .route("/:id")
   .get(entryController.findById)
   .put(entryController.update)
   .delete(entryController.remove);
+
+  router
+  .route("/asteroid/:id")
+  .get(entryController.findByAsteroid)
+  .put(entryController.update)
+  .delete(entryController.remove);
+
+  router
+  .route("/orbit/:id")
+  .get(entryController.findByOrbit)
+  .put(entryController.update)
+  .delete(entryController.remove);
+
+  router
+  .router("/new")
+  .get(entryController.findNew)
 
 module.exports = router;
