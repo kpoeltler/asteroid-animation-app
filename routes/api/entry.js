@@ -24,7 +24,7 @@ router
   .delete(entryController.remove);
 
   router
-  .router("/new")
+  .router("/entry")
   .get(entryController.findNew)
 
 module.exports = router;

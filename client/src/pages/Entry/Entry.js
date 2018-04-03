@@ -66,17 +66,34 @@ class Entry extends Component {
             <Jumbotron>
               <form>
               <Input
+                  value={this.state.user}
+                  onChange={this.handleInputChange}
+                  name="user"
+                  placeholder="email address (required)"
+                 />
+
+              <Input
                   name="asteroid"
                   onChange={this.handleInputChange.bind(this)}
                   placeholder="Asteroid's name"
                 />
-              
-                <Input
-                  name="orbit"
-                  onChange={this.handleInputChange.bind()}
-                  placeholder="Which orbit? Atira, Inner or Outer Main-belt, TransNeptunian, Aten, Parabolic, Hyperbolic, Amor, Jupiter Trojan, Mars-crossing, or Centaur"
-                />
-
+                <div>
+                                <span>Genre </span>
+                            <select
+                                value={this.state.genre}
+                                onChange={this.handleInputChange}
+                                name="orbit"
+                                placeholder="orbit"
+                            >
+                                <option value=""></option>
+                                <option value="Atira">Atira</option>
+                                <option value="Inner or Outer Main-belt">Inner or Outer Main-belt</option>
+                                <option value="Aten">Aten</option>
+                                <option value="Parabolic">TransNeptunian</option>
+                                <option value=" Jupiter Trojan"> Jupiter Trojan</option>
+                                <option value="Amor">Amor</option>
+                  </select>
+                  </div>
                 <TextArea
                   name="comment"
                   onChange={this.handleInputChange.bind(this)}
