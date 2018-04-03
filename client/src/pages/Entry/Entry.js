@@ -4,16 +4,15 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import Axios from "axios";
+// import Axios from "axios";
 import Nav from "../../components/Nav";
-
-
 // import App from "./App"
 
 class Entry extends Component {
   
     state = {
       entries: [],
+      user: "",
       asteroid: "",
       orbit: "",
       comment: ""
@@ -26,7 +25,7 @@ class Entry extends Component {
     loadEntries = () => {
       API.getEntries()
         .then(res =>
-          this.setState({ entries: res.data, asteroid: "", orbit: "", comment: "" })
+          this.setState({ entries: res.data, user: "", asteroid: "", orbit: "", comment: "" })
         )
         .catch(err => console.log(err));
     };
@@ -78,6 +77,7 @@ class Entry extends Component {
                   placeholder="Asteroid's name"
                 />
                 <div>
+                  <br/>
                                 <span>Genre </span>
                             <select
                                 value={this.state.genre}
@@ -94,6 +94,7 @@ class Entry extends Component {
                                 <option value="Amor">Amor</option>
                   </select>
                   </div>
+                  <br/>
                 <TextArea
                   name="comment"
                   onChange={this.handleInputChange.bind(this)}
