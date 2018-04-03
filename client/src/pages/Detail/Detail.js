@@ -15,6 +15,7 @@ class Detail extends Component {
       .then(res => this.setState({ entry: res.data }))
       .catch(err => console.log(err));
   }
+  
 
   render() {
     return (

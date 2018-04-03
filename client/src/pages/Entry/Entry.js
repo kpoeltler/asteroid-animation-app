@@ -6,7 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Axios from "axios";
 import Nav from "../../components/Nav";
-import Panel from "../Panel";
+
 
 // import App from "./App"
 
@@ -14,6 +14,8 @@ class Entry extends Component {
   
     state = {
       entries: [],
+      asteroid: "",
+      orbit: "",
       comment: ""
     };
 
@@ -24,7 +26,7 @@ class Entry extends Component {
     loadEntries = () => {
       API.getEntries()
         .then(res =>
-          this.setState({ entries: res.data, comment: "" })
+          this.setState({ entries: res.data, asteroid: "", orbit: "", comment: "" })
         )
         .catch(err => console.log(err));
     };
@@ -37,31 +39,15 @@ class Entry extends Component {
      });
   };
 
-
-//   router.post('/new', function(req, res, next){
-//     var todo = req.body;
-//     if(!todo.title || !(todo.isDone + '')){
-//         res.status(400);
-//         res.json({
-//             "error": "Bad Data"
-//         });
-//     } else {
-//         db.todos.save(todo, function(err, todo){
-//             if(err){
-//                 res.send(err);
-//             }
-//             res.json(todo);
-//         });
-//     }
-// });
-
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("hi");
     if (this.state.comment) {
       console.log("good comment");
       API.saveEntry ({
-       comment: this.state.comment
+        asteroid: this.state.asteroid,
+        orbit: this.state.orbit,
+        comment: this.state.comment
       })
         .then(res => {
           console.log(res);
@@ -70,12 +56,7 @@ class Entry extends Component {
         .catch(err => console.log(err));
     }
   };
-       
-  // this.handleInputChange = this.handleInputChange.bind(this);
-  // this.loadentrys = this.loadentrys.bind(this);
-  // this.handleFormSubmit = this.handleFormSubmit.bind(this);
-
-
+  // .then(res => this.loadObservations())
   render() {
     return (
       <Container fluid>
@@ -84,10 +65,22 @@ class Entry extends Component {
           <Nav />
             <Jumbotron>
               <form>
+              <Input
+                  name="asteroid"
+                  onChange={this.handleInputChange.bind(this)}
+                  placeholder="Asteroid's name"
+                />
+              
+                <Input
+                  name="orbit"
+                  onChange={this.handleInputChange.bind()}
+                  placeholder="Which orbit? Atira, Inner or Outer Main-belt, TransNeptunian, Aten, Parabolic, Hyperbolic, Amor, Jupiter Trojan, Mars-crossing, or Centaur"
+                />
+
                 <TextArea
                   name="comment"
                   onChange={this.handleInputChange.bind(this)}
-                  placeholder="comment"
+                  placeholder="Comment"
                 />
                 <FormBtn
                   /* disabled={!(this.state.orbit && this.state.asteroid)} */
