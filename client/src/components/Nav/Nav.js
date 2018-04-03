@@ -1,6 +1,12 @@
-import React from "react";
-import  './nav.css';
-// import '/main.css';
+
+import React from 'react';
+
+import  './Nav.css';
+
+
+
+
+// =======================Old code
 const Nav = () => 
   
   <nav className="navbar navbar-inverse navbar-top">
@@ -15,12 +21,13 @@ const Nav = () =>
     
     className="container-fluid">;
       <div>
+        
         <button type="button" className="collapsed navbar-toggle">
           <span className="sr-only">Toggle navigation</span>
           <span className="icon-bar" /> <span className="icon-bar" />
           <span className="icon-bar" />
         </button>
-        <h1 style={{ color:'white', fontWeight: '700' }} >Through The Telescope</h1>
+        <h1 style={{ color:'white', fontWeight: '900' }} >Through The Telescope</h1>
         
       </div>
        </div>   

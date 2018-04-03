@@ -1,6 +1,9 @@
 
 
-
+body {
+    background: #1e001e;
+    color:#af43a1;
+}
 @font-face {font-family:'futuroNormal';
     src:url('../../futuroNormal.otf');
     } 
@@ -32,3 +35,11 @@
     
          border-color: #040009;
      } 
+
+     button .collapsed .navbar-toggle .sr-only .icon-bar{
+        border-color: orange;
+        height: 30px;
+
+
+     }
+          

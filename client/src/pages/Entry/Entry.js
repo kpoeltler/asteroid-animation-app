@@ -78,7 +78,7 @@ class Entry extends Component {
                 />
                 <div>
                   <br/>
-                                <span>Genre </span>
+                                <span> Orbit </span>
                             <select
                                 value={this.state.genre}
                                 onChange={this.handleInputChange}
