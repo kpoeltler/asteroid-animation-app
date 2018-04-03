@@ -80,7 +80,7 @@ class Entry extends Component {
                   <br/>
                                 <span> Orbit </span>
                             <select
-                                value={this.state.genre}
+                                value={this.state.orbit}
                                 onChange={this.handleInputChange}
                                 name="orbit"
                                 placeholder="orbit"

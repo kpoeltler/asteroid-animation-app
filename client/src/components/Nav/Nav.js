@@ -1,12 +1,7 @@
 
 import React from 'react';
-
 import  './Nav.css';
 
-
-
-
-// =======================Old code
 const Nav = () => 
   
   <nav className="navbar navbar-inverse navbar-top">
