@@ -25,6 +25,6 @@ router
 
   router
   .router("/entry")
-  .get(entryController.findNew)
+  .get(entryController.findEntry)
 
 module.exports = router;
