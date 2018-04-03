@@ -52,11 +52,12 @@ body {
     height: 90px;
     width: 1100px;
     float: left;
+    font-stretch: expanded;
 }
 
 
     a:hover {
-        color: #48b7ef;
+        font: #48b7ef;
     }
         
    

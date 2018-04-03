@@ -21,7 +21,7 @@ const Nav = () => (
           <span className="icon-bar" /> <span className="icon-bar" />
           <span className="icon-bar" />
         </button>
-        <a href="/" className="navbar-brand">
+        <a href="/entry/:user" className="navbar-brand">
        Through The Telescope
         </a>
       </div>
