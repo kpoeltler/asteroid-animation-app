@@ -11,7 +11,7 @@ const Nav = () =>
     backgroundPosition: "0px 0px",
     backgroundRepeat: "repeat-x",
     animation: "animatedBackground 15s linear infinite",
-    borderColor: "black"  }}
+    borderColor: "#040009"  }}
     
     className="container-fluid">;
       <div>
