@@ -12,11 +12,13 @@ class Entry extends Component {
       bc: false,
       celestron: false,
       meade: false,
+      coronado: false,
       entries: [],
       telescope: "",
       filter: "",
       asteroid: "",
       orbit: "",
+
       comment: ""
     };
 
@@ -40,9 +42,22 @@ class Entry extends Component {
           console.log("celestron update",this.state.celestron);
         }) 
         break;
+
         case "meade":
         this.setState({meade:true, telescope:event.target.value}, function(){
           console.log("meade update",this.state.meade);
+        }) 
+        break;
+
+        case "bc":
+        this.setState({bc:true, telescope:event.target.value}, function(){
+          console.log("bc update",this.state.bc);
+        }) 
+        break;
+
+        case "coronado":
+        this.setState({coronado:true, telescope:event.target.value}, function(){
+          console.log("coronado update",this.state.bc);
         }) 
         break;
       }
@@ -61,8 +76,10 @@ class Entry extends Component {
     // if (this.state.comment) {
       console.log("good comment");
       API.saveEntry ({
-        asteroid: this.state.asteroid,
+        telescope: this.state.telescope,
+        target: this.state.target,
         orbit: this.state.orbit,
+        filter: this.state.filter,
         comment: this.state.comment
       })
         .then(res => {
@@ -81,20 +98,6 @@ class Entry extends Component {
           <Nav />
             <Jumbotron>
               <form>
-              {/* <Input
-                  value={this.state.user}
-                  onChange={this.handleInputChange}
-                  name="user"
-                  placeholder="email address (required)"
-                 />
-
-              <Input
-              value={this.state.asteroid}
-                  name="asteroid"
-                  onChange={this.handleInputChange}
-                  placeholder="Asteroid's name"
-                /> */}
-
                 <div>
                   <br/>
                                 <span> Telescope </span>
@@ -107,7 +110,8 @@ class Entry extends Component {
                                 <option value=""></option>
                                 <option value='bc' >24" Boller & Chivens</option>
                                 <option value='celestron'>14" Celestron</option>
-                                <option value='meade'>16" Meade</option>    
+                                <option value='meade'>16" Meade</option>
+                                <option value='coronado'>Coronado P.S.T.</option>    
                   </select>
                   </div>
                   <br/>
@@ -166,6 +170,9 @@ class Entry extends Component {
                                 <option value=""></option>
                                 <option value='BG38	2 mm' >BG38	2 mm</option>
                                 <option value='WG360	1 mm'>WG360	1 mm</option>
+                                <option value='Moon	1.25"' >Moon 1.25"</option>
+                                <option value='82A Light Blue' >82A Light Blue"</option>
+                                
                                    
                   </select>
                   </div>
