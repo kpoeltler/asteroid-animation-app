@@ -120,7 +120,9 @@ class Entry extends Component {
                                 onChange={this.handleInputChange}
                                 name="target"
                                 placeholder="Choose target"
+
                             >
+                            
                                 <option value=""></option>
                                 <option value="Asteroid" hidden = {this.state.celestron}>Asteroid</option>
                                 <option value="Variable Star">Variable Star</option>
