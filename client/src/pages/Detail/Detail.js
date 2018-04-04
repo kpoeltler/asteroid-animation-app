@@ -20,16 +20,18 @@ class Detail extends Component {
 
   render() {
     return (
+      <div>
       <Container fluid>
         <Row>
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.entry.comment} 
+                {this.state.entry.asteroid} 
               </h1>
             </Jumbotron>
           </Col>
         </Row>
+
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
@@ -45,7 +47,9 @@ class Detail extends Component {
             <Link to="/">← Back to Homepage</Link>
           </Col>
         </Row>
+
       </Container>
+      </div>
     );
   }
 }

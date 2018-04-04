@@ -21,8 +21,8 @@ const Nav = () => (
           <span className="icon-bar" /> <span className="icon-bar" />
           <span className="icon-bar" />
         </button>
-        <a href="/" className="navbar-brand">
-        <h1 style={{ color:'white', fontWeight: '900' }} >Through The Telescope</h1>
+        <a href="/entry/:user" className="navbar-brand">
+       Through The Telescope
         </a>
       </div>
        </div>   

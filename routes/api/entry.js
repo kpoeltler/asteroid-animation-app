@@ -25,8 +25,10 @@ router
 
   router
   .route("/entry")
+
   // .get(entryController.findEntry)
   .post(entryController.create);
+
 
 module.exports = router;
 
