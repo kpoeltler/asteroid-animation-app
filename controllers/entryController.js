@@ -3,7 +3,7 @@ const db = require("../models");
 // Defining methods for the entrysController
 module.exports = {
   findAll: function(req, res) {
-    db.Entry 
+    db.Entry
     .find(req.query)
       .sort({ asteroid: -1 })
       .then(dbModel => res.json(dbModel))
@@ -20,6 +20,7 @@ module.exports = {
     db.Entry
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
+      .then(console.log("findbyid hit"))
       .catch(err => res.status(422).json(err));
   },
   findByOrbit: function(req, res) {

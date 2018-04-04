@@ -13,7 +13,7 @@ router
 
   router
   .route("/asteroid/:id")
-  .get(entryController.findByAsteroid)
+  // .get(entryController.findByAsteroid)
   .put(entryController.update)
   .delete(entryController.remove);
 
@@ -24,7 +24,10 @@ router
   .delete(entryController.remove);
 
   router
-  .router("/entry")
-  .get(entryController.findEntry)
+  .route("/entry")
+  // .get(entryController.findEntry)
+  .post(entryController.create);
 
 module.exports = router;
+
+

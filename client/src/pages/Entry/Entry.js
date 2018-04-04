@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-// import Axios from "axios";
 import Nav from "../../components/Nav";
-// import App from "./App"
+
 
 class Entry extends Component {
   
@@ -41,7 +39,7 @@ class Entry extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log("hi");
-    if (this.state.comment) {
+    // if (this.state.comment) {
       console.log("good comment");
       API.saveEntry ({
         asteroid: this.state.asteroid,
@@ -53,7 +51,7 @@ class Entry extends Component {
           this.loadEntries()
         })
         .catch(err => console.log(err));
-    }
+    // }
   };
   
   render() {
@@ -72,8 +70,9 @@ class Entry extends Component {
                  />
 
               <Input
+              value={this.state.asteroid}
                   name="asteroid"
-                  onChange={this.handleInputChange.bind(this)}
+                  onChange={this.handleInputChange}
                   placeholder="Asteroid's name"
                 />
                 <div>
@@ -92,12 +91,14 @@ class Entry extends Component {
                                 <option value="Parabolic">TransNeptunian</option>
                                 <option value=" Jupiter Trojan"> Jupiter Trojan</option>
                                 <option value="Amor">Amor</option>
+                                <option value="Apollo">Apollo</option>
                   </select>
                   </div>
                   <br/>
                 <TextArea
+                value={this.state.comment}
                   name="comment"
-                  onChange={this.handleInputChange.bind(this)}
+                  onChange={this.handleInputChange}
                   placeholder="Comment"
                 />
                 <FormBtn

@@ -7,6 +7,7 @@ export default {
   },
   // Gets the entrys with the given id
   getEntry: function(id) {
+    console.log("hits get entry");
     return axios.get("/api/entry/" + id);
   },
   // Deletes the entrys with the given id
@@ -15,7 +16,7 @@ export default {
   },
   // Saves an entry to the database
   saveEntry: function(entryData) {
-    console.log("made it to the api saveEntry");
+    console.log("made it to the api saveEntry, ", entryData);
     return axios.post("/api/entry", entryData);
     
   }
