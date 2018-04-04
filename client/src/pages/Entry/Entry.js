@@ -120,9 +120,7 @@ class Entry extends Component {
                                 onChange={this.handleInputChange}
                                 name="target"
                                 placeholder="Choose target"
-
                             >
-                            
                                 <option value=""></option>
                                 <option value="Asteroid" hidden = {this.state.celestron}>Asteroid</option>
                                 <option value="Variable Star">Variable Star</option>
@@ -131,7 +129,7 @@ class Entry extends Component {
                                 <option value="Planet">Planet</option>
                                 <option value="Moon">Moon</option>
                                 <option value="Galaxy">Galaxy</option>
-                                <option value="Sun" hidden={this.state.celestron}> Sun</option>
+                                <option value="Sun" hidden={(this.state.celestron || this.state.meade) }> Sun</option>
                   </select>
                   </div>
                   <br/>
