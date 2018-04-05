@@ -11,12 +11,17 @@ class Entry extends Component {
     celestron: false,
     meade: false,
     coronado: false,
+    asteroid: false,
+    globular: false,
+    galaxy: false,
+    star: false,
+    solarSystem: false,
+    interest: "",
     entries: [],
     telescope: "",
     filter: "",
-    asteroid: "",
     orbit: "",
-
+    neighborhood: "",
     comment: ""
   };
 
@@ -31,9 +36,14 @@ class Entry extends Component {
           entries: res.data,
           filter: "",
           telescope: "",
+          interest: "",
+          star: "",
+          galaxy: "",
+          globular: "",
           asteroid: "",
           orbit: "",
-          comment: ""
+          comment: "",
+          neighborhood: ""
         })
       )
       .catch(err => console.log(err));
@@ -68,6 +78,39 @@ class Entry extends Component {
           function() {}
         );
         break;
+      case "asteroid":
+        this.setState(
+          { asteroid: true, interest: event.target.value },
+          function() {}
+        );
+        break;
+      case "solarSystem":
+        this.setState(
+          { solarSystem: true, interest: event.target.value },
+          function() {}
+        );
+        break;
+
+      case "star":
+        this.setState(
+          { star: true, interest: event.target.value },
+          function() {}
+        );
+        break;
+
+      case "galaxy":
+        this.setState(
+          { galaxy: true, interest: event.target.value },
+          function() {}
+        );
+        break;
+
+      case "globular":
+        this.setState(
+          { globular: true, interest: event.target.value },
+          function() {}
+        );
+        break;
     }
   };
 
@@ -82,10 +125,12 @@ class Entry extends Component {
     event.preventDefault();
     API.saveEntry({
       telescope: this.state.telescope,
-      target: this.state.target,
+      interest: this.state.interest,
       orbit: this.state.orbit,
       filter: this.state.filter,
-      comment: this.state.comment
+      comment: this.state.comment,
+      neighborhood: this.state.neighborhood,
+    
     })
       .then(res => {
         this.loadEntries();
@@ -97,7 +142,7 @@ class Entry extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="sm-08">
+          <Col size="sm-12">
             <Nav />
             <Jumbotron>
               <form>
@@ -121,16 +166,16 @@ class Entry extends Component {
 
                 <div>
                   <br />
-                  <span> Target </span>
+                  <span> Interest </span>
                   <select
-                    value={this.state.target}
-                    onChange={this.handleInputChange}
-                    name="target"
-                    placeholder="Choose target"
+                    value={this.state.interest}
+                    onChange={this.handleTelescopeChange}
+                    name="interest"
+                    placeholder="Choose Interest"
                   >
                     <option value="" />
                     <option
-                      value="Asteroid"
+                      value="asteroid"
                       hidden={
                         this.state.celestron ||
                         this.state.meade ||
@@ -139,11 +184,13 @@ class Entry extends Component {
                     >
                       Asteroid
                     </option>
-                    <option value="Variable Star" hidden={this.state.coronado}>
-                      Variable Star
+
+                    <option value="solarSystem" hidden={this.state.coronado}>
+                      Solar System
                     </option>
+
                     <option
-                      value="Globular Cluster"
+                      value="globular"
                       hidden={
                         this.state.celestron ||
                         this.state.meade ||
@@ -152,41 +199,104 @@ class Entry extends Component {
                     >
                       Globular Cluster
                     </option>
-                    <option value="Binary Stars" hidden={this.state.coronado}>
-                      Binary Stars
-                    </option>
-                    <option value="Planet" hidden={this.state.coronado}>
-                      Planet
-                    </option>
-                    <option value="Moon" hidden={this.state.coronado}>
-                      Moon
-                    </option>
+
                     <option
-                      value="Galaxy"
+                      value="star"
+                      hidden={this.state.coronado || this.state.meade}
+                    >
+                      Star
+                    </option>
+
+                    <option
+                      value="galaxy"
                       hidden={
-                        this.state.meade || this.state.bc || this.state.coronado
+                        this.state.celestron ||
+                        this.state.coronado ||
+                        this.state.meade
                       }
                     >
                       Galaxy
                     </option>
 
                     <option
-                      value="Sun"
+                      value="sun"
                       hidden={
                         this.state.celestron ||
                         this.state.meade ||
                         this.state.bc
                       }
                     >
-                      {" "}
                       Sun
                     </option>
                   </select>
                 </div>
                 <br />
+
                 <div>
                   <br />
-                  <span> Orbit </span>
+                  <span> Neighborhood </span>
+                  <select
+                    value={this.state.neighborhood}
+                    onChange={this.handleInputChange}
+                    name="neighborhood"
+                    placeholder="Neighborhood"
+                  >
+                    <option value="" />
+                    <option
+                      value="saturn"
+                      hidden={
+                        this.state.globular ||
+                        this.state.asteroid ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      Saturn
+                    </option>
+
+                    <option
+                      value="jupiter"
+                      hidden={
+                        this.state.globular ||
+                        this.state.asteroid ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      Jupiter
+                    </option>
+                    <option
+                      value="moon"
+                      hidden={
+                        this.state.globular ||
+                        this.state.star ||
+                        this.state.asteroid ||
+                        this.state.galaxy
+                      }
+                    >
+                      Moon
+                    </option>
+
+
+                    <option
+                      value="mars"
+                      hidden={
+                        this.state.globular ||
+                        this.state.asteroid ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      Mars
+                    </option>
+                  </select>
+                </div>
+                <br />
+
+
+                <div>
+                  <br />
+                  <span>Orbit</span>
                   <select
                     value={this.state.orbit}
                     onChange={this.handleInputChange}
@@ -194,14 +304,72 @@ class Entry extends Component {
                     placeholder="orbit"
                   >
                     <option value="" />
-                    <option value="Inner or Outer Main-belt">
+                    <option
+                      value="Inner or Outer Main-belt"
+                      hidden={
+                        this.state.globular ||
+                        this.state.planet ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
                       Inner or Outer Main-belt
                     </option>
-                    <option value="Aten">Aten</option>
-                    <option value="Parabolic">TransNeptunian</option>
-                    <option value="Jupiter Trojan"> Jupiter Trojan</option>
-                    <option value="Amor">Amor</option>
-                    <option value="Apollo">Apollo</option>
+                    <option
+                      value="Aten"
+                      hidden={
+                        this.state.globular ||
+                        this.state.planet ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      Aten
+                    </option>
+                    <option
+                      value="Parabolic"
+                      hidden={
+                        this.state.globular ||
+                        this.state.planet ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      TransNeptunian
+                    </option>
+                    <option
+                      value="Jupiter Trojan"
+                      hidden={
+                        this.state.globular ||
+                        this.state.planet ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      Jupiter Trojan
+                    </option>
+                    <option
+                      value="Amor"
+                      hidden={
+                        this.state.globular ||
+                        this.state.planet ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      Amor
+                    </option>
+                    <option
+                      value="Apollo"
+                      hidden={
+                        this.state.globular ||
+                        this.state.planet ||
+                        this.state.star ||
+                        this.state.galaxy
+                      }
+                    >
+                      Apollo
+                    </option>
                   </select>
                 </div>
                 <br />
@@ -238,6 +406,7 @@ class Entry extends Component {
                     >
                       Hydrogen-alpha
                     </option>
+
                     <option
                       value="Solar 90mm"
                       hidden={
@@ -246,20 +415,19 @@ class Entry extends Component {
                         this.state.bc
                       }
                     >
-                      {" "}
                       Solar 90mm
                     </option>
                   </select>
                 </div>
                 <br />
-              
+
                 <TextArea
                   value={this.state.comment}
                   name="comment"
                   onChange={this.handleInputChange}
                   placeholder="Comment"
                 />
-       
+
                 <FormBtn
                   /* hidden={!(this.state.orbit && this.state.asteroid)} */
                   onClick={this.handleFormSubmit}
