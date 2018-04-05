@@ -5,12 +5,12 @@ import  './nav.css';
 const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
     <div id="animate-area" style={
-      { height: 90, clear: "both", 
+      { height: 97, clear: "both", 
     backgroundColor:"transparent", 
-    backgroundImage:"url('http://ak4.picdn.net/shutterstock/videos/11058164/thumb/1.jpg')", 
-    backgroundPosition: "0px 0px",
+    backgroundImage:"url('http://www.fullhdwpp.com/wp-content/uploads/Purple-Space-Cloud_www.FullHDWpp.com_.jpg')", 
+    
     backgroundRepeat: "repeat-x",
-    animation: "animatedBackground 15s linear infinite",
+    animation: "animatedBackground 30s linear infinite",
     borderColor: "#040009"  }}
   
     className="container-fluid">

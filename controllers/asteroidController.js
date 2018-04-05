@@ -1,6 +1,6 @@
 const db = require("../models");
 
-Defining methods for the asteroidController
+//Defining methods for the asteroidController
 module.exports = {
   findAll: function(req, res) {
     db.Entry

@@ -97,7 +97,7 @@ class Entry extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="sm-12">
+          <Col size="sm-08">
             <Nav />
             <Jumbotron>
               <form>
@@ -199,7 +199,7 @@ class Entry extends Component {
                     </option>
                     <option value="Aten">Aten</option>
                     <option value="Parabolic">TransNeptunian</option>
-                    <option value=" Jupiter Trojan"> Jupiter Trojan</option>
+                    <option value="Jupiter Trojan"> Jupiter Trojan</option>
                     <option value="Amor">Amor</option>
                     <option value="Apollo">Apollo</option>
                   </select>
@@ -252,13 +252,14 @@ class Entry extends Component {
                   </select>
                 </div>
                 <br />
-
+              
                 <TextArea
                   value={this.state.comment}
                   name="comment"
                   onChange={this.handleInputChange}
                   placeholder="Comment"
                 />
+       
                 <FormBtn
                   /* hidden={!(this.state.orbit && this.state.asteroid)} */
                   onClick={this.handleFormSubmit}
