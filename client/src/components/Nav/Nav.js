@@ -5,7 +5,7 @@ import  './nav.css';
 const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
     <div id="animate-area" style={
-      { height: 97, width: 1100, clear: "both", 
+      { height: 110, width: 1200, clear: "both", 
     backgroundColor:"transparent", 
     backgroundImage:"url('https://i.pinimg.com/originals/72/b5/23/72b523b0da135a8cf43b7001c74eb72a.jpg')",
   
@@ -21,7 +21,7 @@ const Nav = () => (
           <span className="icon-bar" />
         </button>
         <a href="/" className="navbar-brand">
-       Through The Telescope
+       Through The Telescopes
         </a>
       </div>
        </div>   
