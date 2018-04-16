@@ -4,9 +4,13 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import Nav from "../../components/Nav";
+import { Link } from "react-router-dom";
 
-class Entry extends Component {
+
+class Entries extends Component {
   state = {
+    entries: [],
+    comment: "",
     bc: false,
     celestron: false,
     meade: false,
@@ -17,12 +21,11 @@ class Entry extends Component {
     star: false,
     solarSystem: false,
     interest: "",
-    entries: [],
     telescope: "",
     filter: "",
     orbit: "",
-    neighborhood: "",
-    comment: ""
+    neighborhood: ""
+    
   };
 
   componentDidMount() {
@@ -34,6 +37,7 @@ class Entry extends Component {
       .then(res =>
         this.setState({
           entries: res.data,
+          comment: '',
           filter: "",
           telescope: "",
           interest: "",
@@ -42,7 +46,6 @@ class Entry extends Component {
           globular: "",
           asteroid: "",
           orbit: "",
-          comment: "",
           neighborhood: ""
         })
       )
@@ -117,12 +120,25 @@ class Entry extends Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value,
+      entries: [],
+      filter: "",
+      telescope: "",
+      interest: "",
+      star: "",
+      galaxy: "",
+      globular: "",
+      asteroid: "",
+      orbit: "",
+      comment: "",
+      neighborhood: ""
+
     });
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
+    if (this.state.comment){
     API.saveEntry({
       telescope: this.state.telescope,
       interest: this.state.interest,
@@ -132,19 +148,21 @@ class Entry extends Component {
       neighborhood: this.state.neighborhood,
     
     })
-      .then(res => {
-        this.loadEntries();
-      })
+      .then(res => this.loadEntries())
       .catch(err => console.log(err));
-  };
+  }
+};
 
   render() {
     return (
       <Container fluid>
         <Row>
-          <Col size="sm-12">
+          <Col size=" md-6">
             <Nav />
             <Jumbotron>
+              <h3 style={{ color:"white", fontFamily: "futuroNormal", letterSpacing: "7px"
+               }} >Sleep, Eat, Code, Astronomy </h3>
+             
               <form>
                 <div>
                   <br />
@@ -423,24 +441,26 @@ class Entry extends Component {
 
                 <TextArea
                   value={this.state.comment}
-                  name="comment"
                   onChange={this.handleInputChange}
-                  placeholder="Comment"
+                  name="comment"
+                  placeholder="Observation"
                 />
 
                 <FormBtn
-                  /* hidden={!(this.state.orbit && this.state.asteroid)} */
                   onClick={this.handleFormSubmit}
                 >
-                  Submit Entry
+                  Submit Observation
                 </FormBtn>
-              </form>
-            </Jumbotron>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
 
-export default Entry;
+              </form>
+              </Jumbotron>
+          </Col>
+          </Row>
+      </Container>
+
+)
+
+  }
+      }
+
+export default Entries;

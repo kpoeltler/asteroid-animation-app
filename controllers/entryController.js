@@ -3,16 +3,16 @@ const db = require("../models");
 // Defining methods for the entrysController
 module.exports = {
   findAll: function(req, res) {
-    db.Entry
+    db.Entries
     .find(req.query)
-      .sort({ asteroid: -1 })
+      .sort({ comment: +1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findNew: function(req, res) {
     db.Entry
       .find(req.query)
-      .sort({ date: -1 })
+      .sort({ date: +1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -32,7 +32,7 @@ module.exports = {
     
   create: function(req, res) {
     console.log("route hit", req.body);
-    db.Entry
+    db.Entries
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Gets all entrys
   getEntries: function() {
-    return axios.get("/api/entry");
+    return axios.get("/api/");
   },
   // Gets the entrys with the given id
   getEntry: function(id) {

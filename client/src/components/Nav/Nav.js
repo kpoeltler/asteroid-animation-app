@@ -5,11 +5,10 @@ import  './nav.css';
 const Nav = () => (
   <nav className="navbar navbar-inverse navbar-top">
     <div id="animate-area" style={
-      { height: 97, clear: "both", 
+      { height: 97, width: 1100, clear: "both", 
     backgroundColor:"transparent", 
-    backgroundImage:"url('http://www.fullhdwpp.com/wp-content/uploads/Purple-Space-Cloud_www.FullHDWpp.com_.jpg')", 
-    
-    backgroundRepeat: "repeat-x",
+    backgroundImage:"url('https://i.pinimg.com/originals/72/b5/23/72b523b0da135a8cf43b7001c74eb72a.jpg')",
+  
     animation: "animatedBackground 30s linear infinite",
     borderColor: "#040009"  }}
   
@@ -21,7 +20,7 @@ const Nav = () => (
           <span className="icon-bar" /> <span className="icon-bar" />
           <span className="icon-bar" />
         </button>
-        <a href="/entry/:user" className="navbar-brand">
+        <a href="/" className="navbar-brand">
        Through The Telescope
         </a>
       </div>

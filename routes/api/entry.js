@@ -8,26 +8,28 @@ router.route("/")
 router
   .route("/:id")
   .get(entryController.findById)
-  .put(entryController.update)
+  .post(entryController.update)
   .delete(entryController.remove);
 
-  router
+router
   .route("/asteroid/:id")
   // .get(entryController.findByAsteroid)
   .put(entryController.update)
   .delete(entryController.remove);
 
-  router
+router
   .route("/orbit/:id")
   .get(entryController.findByOrbit)
   .put(entryController.update)
-  .delete(entryController.remove);
 
-  router
-  .route("/entry")
+  
 
-  // .get(entryController.findEntry)
-  .post(entryController.create);
+  
+router
+   .route("/entry")
+
+  //  .get(entryController.findEntry)
+   .post(entryController.create);
 
 
 module.exports = router;

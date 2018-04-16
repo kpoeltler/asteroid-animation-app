@@ -9,11 +9,11 @@ mongoose.connect(
   }
 );
 
-const journalSeed = [
+const bookSeed = [
   {
     asteroid: "",
     orbit:	"Aten asteroids",	
-    reflection: " NEA with aphelion distances greate than 0",
+    reflection: " Testing the data to see if it loads NEA with aphelion distances greate than 0",
     date: new Date(Date.now())
   },
   {
@@ -31,14 +31,14 @@ const journalSeed = [
   {
     asteroid: "Kassandra",		
     orbit:	"",	
-    reflection: " ",
+    reflection: "this is testing the data to make sure it works ",
     date: new Date(Date.now())
   },
 ];
 
 db.Entry
   .remove({})
-  .then(() => db.Entry.collection.insertMany(journalSeed))
+  .then(() => db.Entry.collection.insertMany(bookSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);

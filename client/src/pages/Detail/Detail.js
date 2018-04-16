@@ -13,7 +13,7 @@ class Detail extends Component {
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
     API.getEntry(this.state.orbit)
-      .then(res => this.setState({ entry: res.data }))
+      .then(res => this.setState({ entry:res.data }))
       .catch(err => console.log(err));
   }
   
