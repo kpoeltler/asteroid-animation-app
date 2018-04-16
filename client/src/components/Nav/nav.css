@@ -16,7 +16,7 @@ body {
   
   background:#040009;
 
-  color: #5899ef;
+  color: #e9eef5;
 }
 
  #animate-area {
@@ -57,11 +57,11 @@ button .collapsed .navbar-toggle .sr-only .icon-bar {
 }
 
 a:hover {
-  font: #48b7ef;
+  font: #48ef88;
 }
 
-.navbar-inverse .navbar-brand:hover,
+/* .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  color: #e43737;
   background-color: #48b7ef;
-}
+} */

@@ -7,7 +7,7 @@
   }
   
   .list-overflow-container ul {
-    margin: 0;
+    margin: 1;
   }
   
   .list-overflow-container li {
@@ -21,7 +21,7 @@
   }
   
   .list-overflow-container li a {
-    color: #2A878C;
+    color: rgb(4, 2, 17);
   }
   
   .list-overflow-container li:first-child {

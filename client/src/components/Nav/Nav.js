@@ -21,7 +21,7 @@ const Nav = () => (
           <span className="icon-bar" />
         </button>
         <a href="/" className="navbar-brand">
-       Through The Telescopes
+       Through The Telescopes at Palisades Dows Observatory
         </a>
       </div>
        </div>   

@@ -161,12 +161,13 @@ class Entries extends Component {
             <Nav />
             <Jumbotron>
               <h3 style={{ color:"white", fontFamily: "futuroNormal", letterSpacing: "7px"
-               }} >Sleep, Eat, Code, Astronomy </h3>
+               }} >Go Explore Your Universe
+               <p> To start choose a telescope to learn which celestrial objects are best seen through it </p> </h3>
              
               <form>
                 <div>
                   <br />
-                  <span> Telescope </span>
+                  <span> Choose a telescope </span>
                   <select
                     value={this.state.telescope}
                     onChange={this.handleTelescopeChange}
@@ -184,7 +185,7 @@ class Entries extends Component {
 
                 <div>
                   <br />
-                  <span> Interest </span>
+                  <span> These celestrial objects are best seen through the telescope you chose </span>
                   <select
                     value={this.state.interest}
                     onChange={this.handleTelescopeChange}
