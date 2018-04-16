@@ -9,7 +9,7 @@ const Nav = () => (
     backgroundColor:"transparent", 
     backgroundImage:"url('https://i.pinimg.com/originals/72/b5/23/72b523b0da135a8cf43b7001c74eb72a.jpg')",
   
-    animation: "animatedBackground 30s linear infinite",
+    animation: "animatedBackground 20s linear infinite",
     borderColor: "#040009"  }}
   
     className="container-fluid">
