@@ -39,7 +39,7 @@ button .collapsed .navbar-toggle .sr-only .icon-bar {
 }
 
 .navbar-brand {
-  font-family: futuroNormal;
+  font-family: Titillium Web, Helvetica Neue, Helvetica, Arial, sans-serif;
   letter-spacing: 7px;
   font-weight: 400;
   text-transform: uppercase;

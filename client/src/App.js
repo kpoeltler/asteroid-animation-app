@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Entry from "./pages/Entry";
-import Detail from "./pages/Detail";
 
 const App = () =>
   <Router>
