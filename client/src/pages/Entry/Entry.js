@@ -108,7 +108,7 @@ class Entries extends Component {
         );
         break;
 
-      case "globular":
+      case "globularCluster":
         this.setState(
           { globular: true, interest: event.target.value },
           function() {}
