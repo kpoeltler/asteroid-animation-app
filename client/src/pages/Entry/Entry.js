@@ -114,6 +114,13 @@ class Entries extends Component {
           function() {}
         );
         break;
+
+        case "camera":
+        this.setState(
+          { camera: true, interest: event.target.value },
+          function() {}
+        );
+        break;
     }
   };
 
@@ -132,7 +139,8 @@ class Entries extends Component {
       orbit: "",
       comment: "",
       neighborhood: "",
-      training: ""
+      training: "",
+      camera: "",
 
     });
   };
@@ -195,6 +203,16 @@ class Entries extends Component {
                     placeholder="Choose Interest"
                   >
                     <option value="" />
+
+                    <option
+                      value="camera"
+                      hidden={
+                        this.state.celestron ||
+                        this.state.coronado
+                      }
+                    >
+                      Asteroid
+                    </option>
                     <option
                       value="asteroid"
                       hidden={
