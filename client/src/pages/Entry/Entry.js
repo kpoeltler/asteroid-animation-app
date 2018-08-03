@@ -131,7 +131,8 @@ class Entries extends Component {
       asteroid: "",
       orbit: "",
       comment: "",
-      neighborhood: ""
+      neighborhood: "",
+      training: ""
 
     });
   };
@@ -146,6 +147,7 @@ class Entries extends Component {
       filter: this.state.filter,
       comment: this.state.comment,
       neighborhood: this.state.neighborhood,
+      training: this.state.training,
     
     })
       .then(res => this.loadEntries())
@@ -178,7 +180,7 @@ class Entries extends Component {
                     <option value="bc">24" Boller & Chivens</option>
                     <option value="celestron">14" Celestron</option>
                     <option value="meade">16" Meade</option>
-                    <option value="coronado">Coronado P.S.T.</option>
+                    <option value="coronado">40mm Coronado</option>
                   </select>
                 </div>
                 <br />
@@ -253,7 +255,7 @@ class Entries extends Component {
 
                 <div>
                   <br />
-                  <span> Neighborhood </span>
+                  <span> Our Solar System </span>
                   <select
                     value={this.state.neighborhood}
                     onChange={this.handleInputChange}
@@ -284,6 +286,7 @@ class Entries extends Component {
                     >
                       Jupiter
                     </option>
+
                     <option
                       value="moon"
                       hidden={
@@ -403,10 +406,10 @@ class Entries extends Component {
                     placeholder="spectrograph filter"
                   >
                     <option value="" />
-                    <option value="BG38	2 mm" hidden={this.state.coronado}>
+                    <option value="BG38	2mm" hidden={this.state.coronado}>
                       BG38 2 mm
                     </option>
-                    <option value="WG360	1 mm" hidden={this.state.coronado}>
+                    <option value="WG360	1mm" hidden={this.state.coronado}>
                       WG360 1 mm
                     </option>
                     <option value="Moon	1.25&quot;" hidden={this.state.coronado}>
